@@ -1,0 +1,31 @@
+﻿@page
+@model testEF.Pages.student.Index1Model
+
+@{
+
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index1</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <label>Login</label> <br />
+            <input type="text" name="username" placeholder="Login"><br />
+            <label>Password</label><br />
+            <input type="password" name="password" placeholder="Mot de passe">
+            <br /><br />
+            <button class="btn btn-warning" type="submit">Se connecter</button>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="../Index">Back to home</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
